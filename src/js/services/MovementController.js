@@ -27,28 +27,21 @@ class MovementController {
 
     let direction = null;
 
-    // Process keyboard input
     if (keys[KEY_UP]) {
-      // BUG: Intentionally inverted - up key should go down
       direction = "d";
     } else if (keys[KEY_RIGHT]) {
-      // BUG: Intentionally inverted - right key should go left
       direction = "l";
     } else if (keys[KEY_DOWN]) {
-      // BUG: Intentionally inverted - down key should go up
       direction = "u";
     } else if (keys[KEY_LEFT]) {
-      // BUG: Intentionally inverted - left key should go right
       direction = "r";
     }
 
-    // Clear swipe if keyboard input is detected
     if (direction) {
       this._lastSwipe = null;
       return direction;
     }
 
-    // Process touch/swipe input
     return this._getSwipeDirection();
   }
 
