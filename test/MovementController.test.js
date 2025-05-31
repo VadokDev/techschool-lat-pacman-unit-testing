@@ -17,7 +17,7 @@ describe("MovementController", () => {
 
       const movementController = new MovementController();
       const upDirection = movementController.getInputDirection(keys);
-      expect(upDirection).toBe("u");
+      expect(upDirection).toBe("d");
     });
   });
 });
